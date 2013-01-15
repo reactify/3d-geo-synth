@@ -1,0 +1,56 @@
+#N canvas 161 187 930 369 10;
+#X obj 334 153 r SYNTH-ENV;
+#X obj 334 177 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8409 1;
+#X obj 253 176 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 9055 1;
+#X obj 253 152 r BASS-ENV;
+#X obj 98 175 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7893 1;
+#X obj 98 151 r KICK-ENV;
+#X obj 171 175 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7221 1;
+#X obj 171 151 r BELLS-ENV;
+#X floatatom 334 314 5 0 0 0 - - -;
+#X floatatom 253 313 5 0 0 0 - - -;
+#X floatatom 98 312 5 0 0 0 - - -;
+#X floatatom 171 313 5 0 0 0 - - -;
+#X obj 102 66 s #MIX-BEAT;
+#X obj 176 66 s #MIX-BELLS;
+#X obj 255 66 s #MIX-BLEEPS;
+#X obj 340 66 s #MIX-SYNTH;
+#X obj 102 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 176 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 255 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 340 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 458 70 s #SYNTH-NOTE;
+#X floatatom 458 49 5 0 0 0 - - -;
+#X obj 615 241 s #OUTPUT-VOL;
+#X msg 615 215 1;
+#X floatatom 544 46 5 0 0 0 - - -;
+#X obj 544 70 s #SYNTH-SAW-MIX;
+#X floatatom 649 46 5 0 0 0 - - -;
+#X obj 649 70 s #SYNTH-DEL;
+#X floatatom 730 46 5 0 0 0 - - -;
+#X obj 730 70 s #SYNTH-5TH-MIX;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 9 0;
+#X connect 3 0 2 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 6 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 14 0;
+#X connect 19 0 15 0;
+#X connect 21 0 20 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 0;
