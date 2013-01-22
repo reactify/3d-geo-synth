@@ -23,7 +23,9 @@
  */
 -(void) initializeControls {
 	[self scheduleUpdate];
+    self.touchEnabled = YES;
 }
+
 
 
 #pragma mark Updating layer

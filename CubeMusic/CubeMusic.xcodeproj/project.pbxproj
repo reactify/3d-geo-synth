@@ -662,6 +662,9 @@
 		7B6C183516ADF70000706D31 /* PdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182B16ADF6FE00706D31 /* PdDispatcher.m */; };
 		7B6C183616ADF70000706D31 /* PdFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182D16ADF6FF00706D31 /* PdFile.m */; };
 		7B6C183716ADF70000706D31 /* ringbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182F16ADF6FF00706D31 /* ringbuffer.c */; };
+		7B7E465916AED20700C30932 /* cubeTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E465816AED20700C30932 /* cubeTexture.png */; };
+		7B7E466916AED67400C30932 /* models.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E466816AED67300C30932 /* models.m */; };
+		7BDC143716AEE2D8004ED34B /* CubeMusicGuiOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1632,6 +1635,11 @@
 		7B6C182D16ADF6FF00706D31 /* PdFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PdFile.m; path = libs/libpd/PdFile.m; sourceTree = "<group>"; };
 		7B6C182F16ADF6FF00706D31 /* ringbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ringbuffer.c; path = libs/libpd/ringbuffer.c; sourceTree = "<group>"; };
 		7B6C183016ADF6FF00706D31 /* ringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ringbuffer.h; path = libs/libpd/ringbuffer.h; sourceTree = "<group>"; };
+		7B7E465816AED20700C30932 /* cubeTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cubeTexture.png; path = Resources/cubeTexture.png; sourceTree = "<group>"; };
+		7B7E466716AED67300C30932 /* models.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = models.h; sourceTree = "<group>"; };
+		7B7E466816AED67300C30932 /* models.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = models.m; sourceTree = "<group>"; };
+		7BDC143516AEE2D8004ED34B /* CubeMusicGuiOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeMusicGuiOverlay.h; sourceTree = "<group>"; };
+		7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeMusicGuiOverlay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1709,6 +1717,7 @@
 			children = (
 				7B6C151316ADEF0500706D31 /* pd */,
 				7B6C116716ADD5BD00706D31 /* Default.png */,
+				7B7E465816AED20700C30932 /* cubeTexture.png */,
 				7B6C116916ADD5BD00706D31 /* Default-Landscape~ipad.png */,
 				7B6C116B16ADD5BD00706D31 /* fps_images.png */,
 				7B6C116D16ADD5BD00706D31 /* fps_images-hd.png */,
@@ -2559,12 +2568,16 @@
 		7B6C14BD16ADD5C400706D31 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7BDC143516AEE2D8004ED34B /* CubeMusicGuiOverlay.h */,
+				7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */,
 				7B6C14BE16ADD5C400706D31 /* CubeMusicAppDelegate.h */,
 				7B6C14BF16ADD5C400706D31 /* CubeMusicAppDelegate.m */,
 				7B6C14C116ADD5C400706D31 /* CubeMusicLayer.h */,
 				7B6C14C216ADD5C400706D31 /* CubeMusicLayer.m */,
 				7B6C14C416ADD5C400706D31 /* CubeMusicScene.h */,
 				7B6C14C516ADD5C400706D31 /* CubeMusicScene.m */,
+				7B7E466716AED67300C30932 /* models.h */,
+				7B7E466816AED67300C30932 /* models.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -3474,6 +3487,7 @@
 				7B6C181B16ADF59F00706D31 /* u_samplebank.pd in Resources */,
 				7B6C181C16ADF59F00706D31 /* u_samplebank2.pd in Resources */,
 				7B6C181E16ADF5E700706D31 /* synctimer_stereo.pd in Resources */,
+				7B7E465916AED20700C30932 /* cubeTexture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3737,6 +3751,8 @@
 				7B6C183516ADF70000706D31 /* PdDispatcher.m in Sources */,
 				7B6C183616ADF70000706D31 /* PdFile.m in Sources */,
 				7B6C183716ADF70000706D31 /* ringbuffer.c in Sources */,
+				7B7E466916AED67400C30932 /* models.m in Sources */,
+				7BDC143716AEE2D8004ED34B /* CubeMusicGuiOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3890,6 +3906,7 @@
 				7B6C14CD16ADD5C400706D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

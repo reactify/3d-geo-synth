@@ -139,11 +139,12 @@
     
     
     // Init Pure Data
-    [self initPd];
+    //[self initPd];
 }
 
 
 -(void)initPd {
+    
     self.pdAudioController = [[PdAudioController alloc] init];
     [self.pdAudioController configureAmbientWithSampleRate:44100
                                             numberChannels:2
@@ -174,6 +175,10 @@
     [PdBase sendFloat:1.0 toReceiver:@"#MIX-SYNTH"];
     
 }
+
+
+    
+
 
 
 /** Pause the cocos3d/cocos2d action. */
