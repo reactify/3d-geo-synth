@@ -1,0 +1,15 @@
+#N canvas 578 275 279 246 10;
+#X obj 55 90 sel 0;
+#X obj 55 69 random \$1;
+#X obj 55 40 inlet;
+#X obj 55 152 outlet;
+#X msg 55 112 0;
+#X msg 87 112 1;
+#X obj 130 26 r SEED-\$2;
+#X connect 0 0 4 0;
+#X connect 0 1 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 1 0;
