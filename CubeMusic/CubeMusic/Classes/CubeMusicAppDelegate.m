@@ -152,8 +152,6 @@
     
     [PdBase clearSearchPath];
     
-    [PdBase setDelegate:self];
-    
     [self.pdAudioController setActive:YES];
     
     NSString *patchPath = [[NSBundle mainBundle] pathForResource:@"_main" ofType:@"pd"];

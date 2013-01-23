@@ -662,6 +662,7 @@
 		7B6C183516ADF70000706D31 /* PdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182B16ADF6FE00706D31 /* PdDispatcher.m */; };
 		7B6C183616ADF70000706D31 /* PdFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182D16ADF6FF00706D31 /* PdFile.m */; };
 		7B6C183716ADF70000706D31 /* ringbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182F16ADF6FF00706D31 /* ringbuffer.c */; };
+		7BF82F9A16B02D7600667EB8 /* dummy.pd in Resources */ = {isa = PBXBuildFile; fileRef = 7BF82F9916B02D7600667EB8 /* dummy.pd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1632,6 +1633,7 @@
 		7B6C182D16ADF6FF00706D31 /* PdFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PdFile.m; path = libs/libpd/PdFile.m; sourceTree = "<group>"; };
 		7B6C182F16ADF6FF00706D31 /* ringbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ringbuffer.c; path = libs/libpd/ringbuffer.c; sourceTree = "<group>"; };
 		7B6C183016ADF6FF00706D31 /* ringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ringbuffer.h; path = libs/libpd/ringbuffer.h; sourceTree = "<group>"; };
+		7BF82F9916B02D7600667EB8 /* dummy.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dummy.pd; path = pd/dummy.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2624,6 +2626,7 @@
 				7B6C181A16ADF59F00706D31 /* u_samplebank2.pd */,
 				7B6C181D16ADF5E700706D31 /* synctimer_stereo.pd */,
 				7B6C152916ADF4C600706D31 /* _main.pd */,
+				7BF82F9916B02D7600667EB8 /* dummy.pd */,
 				7B6C152A16ADF4C600706D31 /* abs */,
 				7B6C153A16ADF4C600706D31 /* pd */,
 				7B6C154016ADF4C600706D31 /* rj */,
@@ -3474,6 +3477,7 @@
 				7B6C181B16ADF59F00706D31 /* u_samplebank.pd in Resources */,
 				7B6C181C16ADF59F00706D31 /* u_samplebank2.pd in Resources */,
 				7B6C181E16ADF5E700706D31 /* synctimer_stereo.pd in Resources */,
+				7BF82F9A16B02D7600667EB8 /* dummy.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3753,7 +3757,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					"COCOS2D_DEBUG=1",
-					"LOGGING_ENABLED=1",
+					"LOGGING_ENABLED=0",
 					"LOGGING_LEVEL_TRACE=0",
 					"LOGGING_REZLOAD=1",
 					"GL_ERROR_LOGGING_ENABLED=1",
@@ -3819,6 +3823,17 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CubeMusic/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"COCOS2D_DEBUG=1",
+					"LOGGING_ENABLED=0",
+					"LOGGING_LEVEL_TRACE=0",
+					"LOGGING_REZLOAD=1",
+					"GL_ERROR_LOGGING_ENABLED=1",
+					"GL_ERROR_TRACING_ENABLED=0",
+					"GL_ERROR_ASSERTION_ENABLED=0",
+					"GL_LOGGING_ENABLED=0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"CubeMusic/libs/kazmath/include\"",
 					"\"$(SRCROOT)/CubeMusic/\"/**",
@@ -3890,6 +3905,7 @@
 				7B6C14CD16ADD5C400706D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -431,7 +431,7 @@ or later. See the file LICENSE.txt for the full text.;
 #X obj 68 170 select 0 1 2 3 4 5 6 7;
 #X obj 68 148 random 6;
 #X obj 77 438 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5361 1;
+-1 -1 9089 1;
 #X obj 225 436 outlet;
 #X msg 21 268 \$1 200;
 #X msg 71 268 \$1 200;
@@ -444,7 +444,7 @@ or later. See the file LICENSE.txt for the full text.;
 #X obj 100 98 t b f;
 #X obj 225 407 m_scale 0 1 0 1;
 #X obj 77 454 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5856 1;
+-1 -1 7719 1;
 #X obj 306 380 m_scale 0 1 1 0;
 #X obj 286 355 m_scale 0 1 0.5 0;
 #X obj 100 70 m_scale 0 1 500 5;
@@ -39819,7 +39819,7 @@ clap \$1 \;;
 #X restore 475 151 graph;
 #X restore 573 49 pd arrays;
 #X obj 282 290 e_agc;
-#X msg 185 142 4;
+#X msg 185 142 2;
 #X msg 163 237 set \$1;
 #X obj 185 120 loadbang;
 #X obj 282 355 *~;
