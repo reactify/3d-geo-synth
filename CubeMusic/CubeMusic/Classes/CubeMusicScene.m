@@ -77,9 +77,11 @@
     
     
 	largeCube = [CC3BoxNode nodeWithName:@"_largeCube"];
+    [largeCube setReferenceUpDirection:cc3v(0.0,0.0,1.0)];
+    NSLog(@"cubes global rotation = %f,%f,%f", largeCube.rotation.x,largeCube.rotation.y,largeCube.rotation.z);
     
     [self addChild:largeCube];
-    [self addChildCubes: 3];
+    [self addChildCubes: 4];
     
     
     
@@ -272,6 +274,13 @@
  *
  * For more info, read the notes of this method on CC3Scene.
  */
+
+-(void) nudgeCube{
+    CCActionInterval* left = [CC3RotateBy actionWithDuration: 0.2 rotateBy: cc3v(0.0, 90.0, 0.0)];
+       [largeCube runAction: left];
+}
+
+
 -(void) touchEvent: (uint) touchType at: (CGPoint) touchPoint{
     
     lastTouchedPoint = touchPoint;
@@ -281,6 +290,7 @@
             if(touchPoint.x >= 150)
             {
                 [self rotateCube:1];
+                NSLog(@"touched at: (%f,%f)",touchPoint.x,touchPoint.y);
             }
             else{
                 [self rotateCube:0];
@@ -288,19 +298,27 @@
                 //[self TouchParticles:touchPoint];
 			break;
 		case kCCTouchMoved:
+            {
+                NSLog(@"dragged at: (%f,%f)",touchPoint.x,touchPoint.y);
+                [self nudgeCube];
+                
+            
 			break;
+            }
 		case kCCTouchEnded:
-			
+        {
+			NSLog(@"picked up at: (%f,%f)",touchPoint.x,touchPoint.y);
 			break;
+        }
 		default:
 			break;
 	}
 	
 	// For all event types, remember where the touchpoint was, for subsequent events.
-	
-     
-    
 }
+
+
+
 
 -(void)rotateCube:(uint)Direction
 {
@@ -317,29 +335,12 @@
         default:
             break;
     }
+    
+    NSLog(@"cubes global rotation = %f,%f,%f", largeCube.rotation.x,largeCube.rotation.y,largeCube.rotation.z);
    
     
 }
 
-
-
--(void) rotate: (SpinningNode*) aNode fromSwipeVelocity: (CGPoint) swipeVelocity {
-	
-	// The 2D rotation axis is perpendicular to the drag velocity.
-	CGPoint axis2d = ccpPerp(swipeVelocity);
-	
-	// Project the 2D rotation axis into a 3D axis by mapping the 2D X & Y screen
-	// coords to the camera's rightDirection and upDirection, respectively.
-	CC3Camera* cam = self.activeCamera;
-	aNode.spinAxis = CC3VectorAdd(CC3VectorScaleUniform(cam.rightDirection, axis2d.x),
-								  CC3VectorScaleUniform(cam.upDirection, axis2d.y));
-    
-	// Set the spin speed from the scaled drag velocity.
-	aNode.spinSpeed = ccpLength(swipeVelocity) * 1;
-    
-	// Mark the spinning node as free-wheeling, so that it will start spinning.
-	aNode.isFreeWheeling = YES;
-}
 
 
 /**

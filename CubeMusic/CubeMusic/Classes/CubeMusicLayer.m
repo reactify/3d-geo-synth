@@ -1,4 +1,4 @@
-/**
+/*
  *  CubeMusicLayer.m
  *  CubeMusic
  *
@@ -8,7 +8,6 @@
 
 #import "CubeMusicLayer.h"
 #import "CubeMusicScene.h"
-
 
 @implementation CubeMusicLayer
 
@@ -22,11 +21,34 @@
  * For more info, read the notes of this method on CC3Layer.
  */
 -(void) initializeControls {
-	[self scheduleUpdate];
+	
+    
+    
+    //[self addChild:Button];
+    
+    //CCMenu* panelMenu = [CCMenu menuWithItems:pad1, nil];
+    
+    
+    
+    
     self.touchEnabled = YES;
+    [self addPads];
+    [self scheduleUpdate];
+   
 }
 
 
+-(void) addPads{
+    
+    GLfloat thumbScale = CC_CONTENT_SCALE_FACTOR();
+    CCSprite* jsThumb=[CCSprite spriteWithFile:@"thumbDebug.png"];
+    jsThumb.scale=thumbScale;
+    pad1 = [Joystick joystickWithThumb:jsThumb andSize: CGSizeMake(1,1)];
+    //pad1.position = ccp(0,0);
+    
+    [self addChild:pad1];
+    
+}
 
 #pragma mark Updating layer
 
@@ -53,10 +75,13 @@
  * CC3Layer implementation. To receive and handle touch-move events for object
  * picking, uncomment the following method implementation.
  */
-/*
--(void) ccTouchMoved: (UITouch *)touch withEvent: (UIEvent *)event {
-	[self handleTouch: touch ofType: kCCTouchMoved];
-}
- */
+
+//-(void) ccTouchMoved: (UITouch *)touch withEvent: (UIEvent *)event {
+	//[self handleTouch: touch ofType: kCCTouchMoved];
+
+ 
+
+
+
 
 @end

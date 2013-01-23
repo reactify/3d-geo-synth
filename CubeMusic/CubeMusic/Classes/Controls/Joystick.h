@@ -1,23 +1,42 @@
-//
-//  models.h
-//  CubeMusic
-//
-//  Created by Yuli Levtov on 22/01/2013.
-//
-//
+/*
+ * Joystick.h
+ *
+ * cocos3d 2.0.0
+ * Author: Bill Hollings
+ * Copyright (c) 2010-2013 The Brenwill Workshop Ltd. All rights reserved.
+ * http://www.brenwill.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * http://en.wikipedia.org/wiki/MIT_License
+ * 
+ * This code was inspired by code donated to the cocos2d user community
+ * by cocos2d user "adunsmoor". The original code can be found here:
+ *     http://www.cocos2d-iphone.org/forum/topic/1418
+ */
 
-#import "CC3Node.h"
-#import "CCActionManager.h"
-#import "CC3PODLight.h"
-#import "CC3PointParticles.h"
-#import "CC3MeshParticleSamples.h"
-#import "CC3BitmapLabelNode.h"
+/** @file */	// Doxygen marker
 
-@interface models : NSObject
+#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
-@end
-
-
+/** Specifies a 2D position using an angular coordinate axes. */
 typedef struct {
 	CGFloat heading;		/**< The angular heading in degrees. */
 	CGFloat radius;			/**< The radial distance. */
@@ -26,12 +45,24 @@ typedef struct {
 /** A constant representing a zero angular point, with both angle and radius set to zero. */
 static const AngularPoint AngularPointZero = {0.0, 0.0};
 
-
+/**
+ * A Joystick control constructed from two child CCNodes, one as a movable thumb CCNode that
+ * visually simulates the "stick", and another as an optional background CCNode that provides
+ * a backdrop over which the thumb moves.
+ *
+ * The user can control the Joystick by touching within the bounds of the Joystick and then
+ * dragging the finger around. They thumb image will track the finger within the bounds of 
+ * the Joystick. When the user raises the finger, the thumb will move in an animated fashion
+ * back to its resting position, which is the anchorPoint of the Joystick.
+ *
+ * The current position of the thumb can be read using either X-Y coordinates via the velocity
+ * property, or angular coordinates via the angularVelocity property.
+ */
 @interface Joystick : CCLayer {
 	CCNode *thumbNode;
 	BOOL isTracking;
 	CGPoint velocity;
-	//AngularPoint angularVelocity;
+	AngularPoint angularVelocity;
 	CGPoint travelLimit;
 }
 
@@ -81,48 +112,4 @@ static const AngularPoint AngularPointZero = {0.0, 0.0};
 +(id) joystickWithThumb: (CCNode*) thumbNode andBackdrop: (CCNode*) backgroundNode;
 
 @end
-
-@interface PointParticle : CC3PointParticle
-{
-    GLfloat lifetime;
-    GLfloat scalingFactor;
-}
-
-@end
-
-
-
-@interface SpinningNode : CC3Node {
-	CC3Vector spinAxis;
-	GLfloat spinSpeed;
-	GLfloat friction;
-	BOOL isFreeWheeling;
-}
-
-/**
- * The axis that the cube spins around.
- *
- * This is different than the rotationAxis property, because this is the axis around which
- * a CHANGE in rotation will occur. Depending on how the node is already rotated, this may
- * be very different than the rotationAxis.
- */
-@property(nonatomic, assign) CC3Vector spinAxis;
-
-/**
- * The speed of rotation. This value can be directly updated, and then will automatically
- * be slowed down over time according to the value of the friction property.
- */
-@property(nonatomic, assign) GLfloat spinSpeed;
-
-/**
- * The friction value that is applied to the spinSpeed to slow it down over time.
- *
- * A value of zero will not slow rotation down at all and the node will continue
- * spinning indefinitely.
- */
-@property(nonatomic, assign) GLfloat friction;
-
-/** Indicates whether the node is spinning without direct control by touch events. */
-@property(nonatomic, assign) BOOL isFreeWheeling;
-
-@end
+		

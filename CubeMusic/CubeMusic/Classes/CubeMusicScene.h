@@ -8,19 +8,18 @@
 
 
 #import "CC3Scene.h"
-#import "models.h"
+
 
 
 /** A sample application-specific CC3Scene subclass.*/
 @interface CubeMusicScene : CC3Scene {
     
-    SpinningNode *largeCube;
+    CC3Node *largeCube;
     NSMutableArray* particleArray;
-    CC3ParticleEmitter* particleEmitter;
-
-    
+    //CC3ParticleEmitter* particleEmitter;
     CC3Node *particleManager;
     
+    CC3Vector* cubeCamAimVector;
     
     
     CGPoint lastTouchedPoint;

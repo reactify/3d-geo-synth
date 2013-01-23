@@ -13,9 +13,14 @@
 #import "CC3IOSExtensions.h"
 #import "CC3layer.h"
 #import "ccMacros.h"
+#import "models.h"
 
-@interface CubeMusicGuiOverlay : CCNode {
-    
+
+@interface CubeMusicGuiOverlay : CC3Layer {
+    Joystick* topLeft;
+    Joystick* topRight;
+    Joystick* bottomLeft;
+    Joystick* bottomRight;
 }
 
 @end

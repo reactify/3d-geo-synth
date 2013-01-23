@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CubeMusic/Classes/CubeMusicScene.m"
-         timestampString = "380560384.104643"
+         timestampString = "380562956.16131"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "279"
-         endingLineNumber = "279"
+         startingLineNumber = "288"
+         endingLineNumber = "288"
          landmarkName = "-touchEvent:at:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CubeMusic/Classes/CubeMusicScene.m"
-         timestampString = "380560384.104643"
+         timestampString = "380563308.325995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "290"
-         endingLineNumber = "290"
+         startingLineNumber = "301"
+         endingLineNumber = "301"
          landmarkName = "-touchEvent:at:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -41,6 +41,32 @@
          endingLineNumber = "18"
          landmarkName = "@synthesize spinAxis, spinSpeed, friction, isFreeWheeling;"
          landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CubeMusic/Classes/CubeMusicScene.m"
+         timestampString = "380562594.110669"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
+         landmarkName = "-initializeScene"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CubeMusic/Classes/CubeMusicScene.m"
+         timestampString = "380562770.881789"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-initializeScene"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

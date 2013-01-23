@@ -663,8 +663,13 @@
 		7B6C183616ADF70000706D31 /* PdFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182D16ADF6FF00706D31 /* PdFile.m */; };
 		7B6C183716ADF70000706D31 /* ringbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C182F16ADF6FF00706D31 /* ringbuffer.c */; };
 		7B7E465916AED20700C30932 /* cubeTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E465816AED20700C30932 /* cubeTexture.png */; };
-		7B7E466916AED67400C30932 /* models.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E466816AED67300C30932 /* models.m */; };
-		7BDC143716AEE2D8004ED34B /* CubeMusicGuiOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */; };
+		7BA14EA216AFF1E6006CA4A6 /* CCNodeAdornments.h in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14E9C16AFEDE5006CA4A6 /* CCNodeAdornments.h */; };
+		7BA14EA316AFF1E6006CA4A6 /* CCNodeAdornments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14E9D16AFEDE5006CA4A6 /* CCNodeAdornments.m */; };
+		7BA14EA416AFF1E6006CA4A6 /* CCNodeExtensions.h in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14E9E16AFEDE5006CA4A6 /* CCNodeExtensions.h */; };
+		7BA14EA516AFF1E6006CA4A6 /* CCNodeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14E9F16AFEDE5006CA4A6 /* CCNodeExtensions.m */; };
+		7BA14EA616AFF1E6006CA4A6 /* Joystick.h in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14EA016AFEDE5006CA4A6 /* Joystick.h */; };
+		7BA14EA716AFF1E6006CA4A6 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA14EA116AFEDE5006CA4A6 /* Joystick.m */; };
+		7BA14EA916AFF41E006CA4A6 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA14EA816AFF41E006CA4A6 /* thumb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1636,10 +1641,13 @@
 		7B6C182F16ADF6FF00706D31 /* ringbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ringbuffer.c; path = libs/libpd/ringbuffer.c; sourceTree = "<group>"; };
 		7B6C183016ADF6FF00706D31 /* ringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ringbuffer.h; path = libs/libpd/ringbuffer.h; sourceTree = "<group>"; };
 		7B7E465816AED20700C30932 /* cubeTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cubeTexture.png; path = Resources/cubeTexture.png; sourceTree = "<group>"; };
-		7B7E466716AED67300C30932 /* models.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = models.h; sourceTree = "<group>"; };
-		7B7E466816AED67300C30932 /* models.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = models.m; sourceTree = "<group>"; };
-		7BDC143516AEE2D8004ED34B /* CubeMusicGuiOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeMusicGuiOverlay.h; sourceTree = "<group>"; };
-		7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeMusicGuiOverlay.m; sourceTree = "<group>"; };
+		7BA14E9C16AFEDE5006CA4A6 /* CCNodeAdornments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNodeAdornments.h; sourceTree = "<group>"; };
+		7BA14E9D16AFEDE5006CA4A6 /* CCNodeAdornments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNodeAdornments.m; sourceTree = "<group>"; };
+		7BA14E9E16AFEDE5006CA4A6 /* CCNodeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNodeExtensions.h; sourceTree = "<group>"; };
+		7BA14E9F16AFEDE5006CA4A6 /* CCNodeExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNodeExtensions.m; sourceTree = "<group>"; };
+		7BA14EA016AFEDE5006CA4A6 /* Joystick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
+		7BA14EA116AFEDE5006CA4A6 /* Joystick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Joystick.m; sourceTree = "<group>"; };
+		7BA14EA816AFF41E006CA4A6 /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumb.png; path = Resources/thumb.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1717,6 +1725,7 @@
 			children = (
 				7B6C151316ADEF0500706D31 /* pd */,
 				7B6C116716ADD5BD00706D31 /* Default.png */,
+				7BA14EA816AFF41E006CA4A6 /* thumb.png */,
 				7B7E465816AED20700C30932 /* cubeTexture.png */,
 				7B6C116916ADD5BD00706D31 /* Default-Landscape~ipad.png */,
 				7B6C116B16ADD5BD00706D31 /* fps_images.png */,
@@ -2568,16 +2577,13 @@
 		7B6C14BD16ADD5C400706D31 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7BDC143516AEE2D8004ED34B /* CubeMusicGuiOverlay.h */,
-				7BDC143616AEE2D8004ED34B /* CubeMusicGuiOverlay.m */,
 				7B6C14BE16ADD5C400706D31 /* CubeMusicAppDelegate.h */,
 				7B6C14BF16ADD5C400706D31 /* CubeMusicAppDelegate.m */,
 				7B6C14C116ADD5C400706D31 /* CubeMusicLayer.h */,
 				7B6C14C216ADD5C400706D31 /* CubeMusicLayer.m */,
 				7B6C14C416ADD5C400706D31 /* CubeMusicScene.h */,
 				7B6C14C516ADD5C400706D31 /* CubeMusicScene.m */,
-				7B7E466716AED67300C30932 /* models.h */,
-				7B7E466816AED67300C30932 /* models.m */,
+				7BA14E9B16AFEDE5006CA4A6 /* Controls */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -3046,6 +3052,19 @@
 			path = pd/sounds;
 			sourceTree = "<group>";
 		};
+		7BA14E9B16AFEDE5006CA4A6 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				7BA14E9C16AFEDE5006CA4A6 /* CCNodeAdornments.h */,
+				7BA14E9D16AFEDE5006CA4A6 /* CCNodeAdornments.m */,
+				7BA14E9E16AFEDE5006CA4A6 /* CCNodeExtensions.h */,
+				7BA14E9F16AFEDE5006CA4A6 /* CCNodeExtensions.m */,
+				7BA14EA016AFEDE5006CA4A6 /* Joystick.h */,
+				7BA14EA116AFEDE5006CA4A6 /* Joystick.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3488,6 +3507,7 @@
 				7B6C181C16ADF59F00706D31 /* u_samplebank2.pd in Resources */,
 				7B6C181E16ADF5E700706D31 /* synctimer_stereo.pd in Resources */,
 				7B7E465916AED20700C30932 /* cubeTexture.png in Resources */,
+				7BA14EA916AFF41E006CA4A6 /* thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3498,6 +3518,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA14EA216AFF1E6006CA4A6 /* CCNodeAdornments.h in Sources */,
+				7BA14EA316AFF1E6006CA4A6 /* CCNodeAdornments.m in Sources */,
+				7BA14EA416AFF1E6006CA4A6 /* CCNodeExtensions.h in Sources */,
+				7BA14EA516AFF1E6006CA4A6 /* CCNodeExtensions.m in Sources */,
+				7BA14EA616AFF1E6006CA4A6 /* Joystick.h in Sources */,
+				7BA14EA716AFF1E6006CA4A6 /* Joystick.m in Sources */,
 				7B6C118416ADD5BD00706D31 /* CCAction.m in Sources */,
 				7B6C118716ADD5BD00706D31 /* CCActionCamera.m in Sources */,
 				7B6C118A16ADD5BD00706D31 /* CCActionCatmullRom.m in Sources */,
@@ -3751,8 +3777,6 @@
 				7B6C183516ADF70000706D31 /* PdDispatcher.m in Sources */,
 				7B6C183616ADF70000706D31 /* PdFile.m in Sources */,
 				7B6C183716ADF70000706D31 /* ringbuffer.c in Sources */,
-				7B7E466916AED67400C30932 /* models.m in Sources */,
-				7BDC143716AEE2D8004ED34B /* CubeMusicGuiOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
