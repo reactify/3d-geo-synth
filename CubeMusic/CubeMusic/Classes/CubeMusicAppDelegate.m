@@ -136,25 +136,27 @@
 	// Attach the layer to the controller and run a scene with it.
 	[_viewController runSceneOnNode: mainLayer];
     
-    
-    
     // Init Pure Data
-    [self initPd];
-}
-
-
--(void)initPd {
     self.pdAudioController = [[PdAudioController alloc] init];
     [self.pdAudioController configureAmbientWithSampleRate:44100
                                             numberChannels:2
                                              mixingEnabled:YES];
     [PdBase setDelegate:self];
+    [self initPd];
+}
+
+-(void)initPd {
     
-    [PdBase clearSearchPath];
+//    [PdBase clearSearchPath];
+    [self openAndRunPdPatch];
+    
+}
+
+- (void) openAndRunPdPatch {
     
     [self.pdAudioController setActive:YES];
     
-    NSString *patchPath = [[NSBundle mainBundle] pathForResource:@"_main" ofType:@"pd"];
+    NSString *patchPath = [[NSBundle mainBundle] pathForResource:@"_main" ofType:@"pd" inDirectory:@"pd"];
     
     self.patch = [PdFile openFileNamed:[patchPath lastPathComponent]
                                   path:[patchPath stringByDeletingLastPathComponent]];
@@ -162,17 +164,11 @@
     if (self.patch) NSLog(@"openAndRunPdPatch has run");
     
     [PdBase sendFloat:1.0 toReceiver:@"#OUTPUT-VOL"];
-    
-    [PdBase sendFloat:1.0 toReceiver:@"#MIX-BEAT"];
-    
-    [PdBase sendFloat:1.0 toReceiver:@"#MIX-BELLS"];
-    
-    [PdBase sendFloat:1.0 toReceiver:@"#MIX-BLEEPS"];
-    
+    [PdBase sendFloat:1.0 toReceiver:@"#MIX-BASS"];
     [PdBase sendFloat:1.0 toReceiver:@"#MIX-SYNTH"];
-    
+    [PdBase sendFloat:1.0 toReceiver:@"#MIX-DRUMS"];
+    [PdBase sendFloat:1.0 toReceiver:@"#MIX-BELLS"];
 }
-
 
 /** Pause the cocos3d/cocos2d action. */
 -(void) applicationWillResignActive: (UIApplication*) application {
@@ -217,7 +213,6 @@
 	[CCDirector.sharedDirector setNextDeltaTimeZero: YES];
 }
 
-
 #pragma mark - PD messages
 
 - (void)receiveSymbol:(NSString *)symbol fromSource:(NSString *)source {
@@ -243,6 +238,5 @@
     
     [PdBase sendSymbol:symbol toReceiver:receiver];
 }
-
 
 @end

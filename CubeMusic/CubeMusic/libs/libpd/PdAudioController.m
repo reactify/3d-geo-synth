@@ -92,6 +92,7 @@
 - (PdAudioStatus)configureAmbientWithSampleRate:(int)sampleRate
                                  numberChannels:(int)numChannels
                                   mixingEnabled:(BOOL)mixingEnabled {
+    NSLog(@"configureAmbientWithSampleRate runnint");
 	PdAudioStatus status = [self updateSampleRate:sampleRate];
     if (status == PdAudioError) {
         return PdAudioError;

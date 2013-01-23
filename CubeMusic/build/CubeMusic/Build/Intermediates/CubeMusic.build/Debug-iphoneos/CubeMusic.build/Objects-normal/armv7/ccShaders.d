@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/yulilevtov/workspaces/3d-geo-synth/CubeMusic/CubeMusic/libs/cocos2d/ccShaders.m \
+  CubeMusic/libs/cocos2d/ccShaders.h \
+  CubeMusic/libs/cocos2d/Platforms/CCGL.h \
+  CubeMusic/libs/cocos2d/Platforms/../ccMacros.h \
+  CubeMusic/libs/cocos2d/ccConfig.h \
+  CubeMusic/libs/cocos2d/Platforms/iOS/CCGLView.h \
+  CubeMusic/libs/cocos2d/Platforms/iOS/CCESRenderer.h \
+  CubeMusic/libs/cocos2d/ccShader_Position_uColor_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_Position_uColor_vert.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionColor_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionColor_vert.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTexture_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTexture_vert.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTextureA8Color_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTextureA8Color_vert.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTextureColor_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTextureColor_vert.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTextureColorAlphaTest_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTexture_uColor_frag.h \
+  CubeMusic/libs/cocos2d/ccShader_PositionTexture_uColor_vert.h

@@ -407,8 +407,8 @@ static PdMessageHandler *messageHandler;
   @synchronized(self) {
     const char *base = [baseName cStringUsingEncoding:NSASCIIStringEncoding];
     const char *path = [pathName cStringUsingEncoding:NSASCIIStringEncoding];
-      NSLog(@"base = %@", baseName);
-      NSLog(@"path = %@", pathName);
+      NSLog(@"base = %s", base);
+      NSLog(@"path = %s", path);
 		return libpd_openfile(base, path);
   }
 }
